@@ -1,9 +1,7 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
+
+import AnimeCard from "./components/AnimeCard";
+
 export default function Home() {
-  return (
-    <>
-      <Navbar />
-    </>
-  );
+  return <></>;
 }

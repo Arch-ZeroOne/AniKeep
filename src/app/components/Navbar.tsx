@@ -31,7 +31,7 @@ function Navbar() {
               </li>
 
               <li>
-                <a>Browse</a>
+                <a>Popular</a>
               </li>
               <li>
                 <a>Favourites</a>
@@ -49,7 +49,7 @@ function Navbar() {
             </li>
 
             <li>
-              <a>Browse</a>
+              <a>Popular</a>
             </li>
             <li>
               <a>Favourites</a>
@@ -58,7 +58,7 @@ function Navbar() {
         </div>
         <div className="navbar-end">
           <a className="btn rounded-xl">
-            <i className="fa-solid fa-user"></i>
+            <i className="fa-solid fa-user text-xl"></i>
           </a>
         </div>
       </div>
