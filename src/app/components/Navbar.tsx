@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Navbar() {
   return (
@@ -27,14 +28,14 @@ function Navbar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Home</a>
+                <Link href="/">Home</Link>
               </li>
 
               <li>
-                <a>Popular</a>
+                <Link href="/Anime">Popular</Link>
               </li>
               <li>
-                <a>Favourites</a>
+                <Link href="/Favourites">Favourites</Link>
               </li>
             </ul>
           </div>
@@ -45,14 +46,14 @@ function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <Link href="/">Home</Link>
             </li>
 
             <li>
-              <a>Popular</a>
+              <Link href="/Anime">Popular</Link>
             </li>
             <li>
-              <a>Favourites</a>
+              <Link href="/Favourites">Favourites</Link>
             </li>
           </ul>
         </div>

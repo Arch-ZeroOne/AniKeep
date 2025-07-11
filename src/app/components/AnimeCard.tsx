@@ -1,23 +1,20 @@
 import React from "react";
-import { Anime } from "../types/anime";
+import { Anime } from "../types/interfaces";
 import Image from "next/image";
-import { useState } from "react";
-import { Genres } from "../types/anime";
 
-function AnimeCard({ title, status, img, genre }: Anime) {
-  console.log(genre);
-  //TODO Study more about types
-  //Genres[] here instead of item:Genre since its a array of objects
-  const genres: Genres[] = genre.map((item) => {
-    return item.name;
-  });
-  console.log(genre);
+function AnimeCard({ title, status, images, genres }: Anime) {
+  const { image_url } = images.jpg;
 
   return (
     <>
       <div className="card bg-base-100 w-full shadow-sm">
         <figure>
-          <img src={img.jpg.image_url} className="w-full" alt="Anime Image" />
+          <Image
+            src={String(image_url)}
+            width={500}
+            height={300}
+            alt="Anime Image"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
@@ -26,7 +23,9 @@ function AnimeCard({ title, status, img, genre }: Anime) {
             <>
               {genres &&
                 genres.map((item: any) => (
-                  <div className="badge badge-dash badge-primary">{item}</div>
+                  <div className="badge badge-dash badge-primary">
+                    {item.name}
+                  </div>
                 ))}
             </>
           </div>

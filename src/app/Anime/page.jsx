@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import AnimeCard from "../components/AnimeCard";
 import { useEffect, useState } from "react";
@@ -12,7 +11,6 @@ function AllAnime() {
     const fetchAnime = async () => {
       const allAnime = await getAnime();
       setAnimes(allAnime.data);
-      getGenre(allAnime.data.genres);
     };
     fetchAnime();
   }, []);
@@ -24,8 +22,8 @@ function AllAnime() {
           animes.map((anime) => (
             <AnimeCard
               title={anime.title}
-              img={anime.images}
-              genre={anime.genres}
+              images={anime.images}
+              genres={anime.genres}
             />
           ))}
       </div>
